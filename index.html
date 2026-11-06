@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/style.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
                     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
@@ -17,8 +17,10 @@
 <div class="sidebar" id="sidebar">
         <ul>
             
-            <h2> Dashboard</h2>
-           
+
+<a href="/index.html"><h2 class="sidebar-title"> Dashboard</h2></a>
+
+
             <li><a href="/index.html">Overview</a></li>
             <li><a href="/pages/tickets.html">Tickets</a></li>
             <li><a href="#">Ideas</a></li> 
@@ -28,7 +30,7 @@
         </ul>
     </div>
     <div class="main-content">
-        <button id="menuButton">
+        <button id="menuButton" type="button" aria-controls="sidebar" aria-expanded="true" aria-label="Toggle navigation">
             <img src="/images/menu_50dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.svg" alt="">
         </button>
         <div class="btns">
@@ -40,6 +42,7 @@
   <button class="btn-2">Add</button>
   </div>   
 </div>
+<div class="table-container">
 <table>
        
         <thead>
@@ -145,7 +148,7 @@
    <img src="./images/Ellipse 8.png" alt="">    
     <span>Guy Hawkins</span>
 
-   </d>
+   </td>
     <td>5/27/15</td>
     <td> <span class="green">$576.28</span> </td>
     <td> <span class="pink">$446.61</span> </td>
@@ -169,7 +172,7 @@
    
    <img src="/images/Ellipse 10.png" alt="">  
       <span>Robert Fox</span>
-   </d>
+   </td>
     <td>4/4/18</td>
     <td> <span class="green">$202.87</span></td> 
     <td> <span class="pink">$275.43</span></td>
@@ -181,6 +184,7 @@
             </tr>
         </tfoot>
     </table>
+    </div>
 
 
 

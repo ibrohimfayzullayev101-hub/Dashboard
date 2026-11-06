@@ -116,6 +116,15 @@ letter-spacing: 0.4px;
   
 }
 
+.sidebar > ul > a {
+  text-decoration: none;
+}
+
+.sidebar-title {
+  color: #fff;
+  font-size: 24px;
+}
+
 ul{
     font-family: Mulish;
 font-weight: 400;
@@ -203,3 +212,142 @@ left: 302.45px;
 opacity: 1;
 }
 
+.sidebar {
+  flex: 0 0 250px;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  overflow-y: auto;
+}
+
+.sidebar.is-collapsed {
+  flex-basis: 0;
+  width: 0;
+  padding-left: 0;
+  padding-right: 0;
+  overflow: hidden;
+}
+
+.main-content {
+  min-width: 0;
+}
+
+.btns {
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.btns1,
+.btns2 {
+  min-width: 0;
+}
+
+.btns2 {
+  margin: 0 0 30px;
+  flex-shrink: 0;
+}
+
+h1 {
+  margin: 24px 0 30px;
+}
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+table {
+  min-width: 680px;
+}
+
+@media (max-width: 768px) {
+  body {
+    display: block;
+  }
+
+  .sidebar {
+    position: fixed;
+    z-index: 10;
+    inset: 0 auto 0 0;
+    width: min(250px, 82vw);
+    height: 100dvh;
+    flex-basis: auto;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+
+  .sidebar.is-open {
+    transform: translateX(0);
+  }
+
+  .sidebar.is-collapsed {
+    width: min(250px, 82vw);
+    padding: 15px;
+  }
+
+  .main-content {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 16px;
+  }
+
+  #menuButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    margin: 0 0 8px;
+    padding: 0;
+  }
+
+  #menuButton img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .btns {
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  h1 {
+    margin: 8px 0 20px;
+    font-size: clamp(28px, 7vw, 39px);
+  }
+
+  .btns2 {
+    gap: 12px;
+    margin: 0 0 20px auto;
+  }
+
+  td {
+    padding: 14px 8px;
+  }
+
+  thead {
+    height: auto;
+  }
+}
+
+@media (max-width: 420px) {
+  .main-content {
+    padding: 12px;
+  }
+
+  .btns {
+    gap: 8px;
+  }
+
+  .btns2 {
+    gap: 8px;
+  }
+
+  .btn-1,
+  .btn-2 {
+    width: auto;
+    min-width: 56px;
+    padding: 9px 14px;
+  }
+}
